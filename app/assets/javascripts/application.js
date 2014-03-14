@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require serializeJSON
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require underscore
@@ -22,4 +23,3 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require_tree .

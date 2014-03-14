@@ -1,0 +1,14 @@
+<h2>Index</h2>
+
+<div class="boards-index">
+  <ul>
+    <% boards.each(function (board) { %>
+      <li>
+        <a href="#/boards/<%= board.get("id") %>">
+          <%= board.get("title") %>
+        </a>  
+      </li>
+    <% }); %>
+  </ul>
+  <a href="#/boards/new">Create New Board</a>
+</div>

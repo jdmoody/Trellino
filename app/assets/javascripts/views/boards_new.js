@@ -2,7 +2,7 @@ window.Trellino.Views.BoardsNew = Backbone.View.extend({
   template: JST["boards/new"],
   
   events: {
-    "submit #new-board": "submit"
+    "submit form": "submit"
   },
   
   render: function () {
@@ -20,7 +20,7 @@ window.Trellino.Views.BoardsNew = Backbone.View.extend({
     newBoard.save({}, {
       success: function () {
         Trellino.Collections.boards.add(newBoard);
-        Backbone.history.navigate("", { trigger: true });
+        Backbone.history.navigate("boards/" + newBoard.get("id"), { trigger: true });
       }
     });
   }

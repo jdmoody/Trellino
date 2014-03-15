@@ -2,7 +2,7 @@ window.Trellino.Routers.AppRouter = Backbone.Router.extend({
   routes: {
     "": "boardsIndex",
     "boards/new": "boardsNew",
-    "boards/:id": "boardsShow"
+    "boards/:id": "boardsShow",
   },
   
   boardsIndex: function () {
@@ -20,7 +20,7 @@ window.Trellino.Routers.AppRouter = Backbone.Router.extend({
   },
   
   boardsShow: function (id) {
-    var board = new Trellino.Models.Board.({id: id});
+    var board = new Trellino.Models.Board({id: id});
     
     var showView = new Trellino.Views.BoardsShow({
       model: board

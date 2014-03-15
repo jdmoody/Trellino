@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: boards
+#
+#  id         :integer          not null, primary key
+#  title      :string(255)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Board < ActiveRecord::Base
   
   validates :title, presence: true
@@ -12,7 +22,7 @@ class Board < ActiveRecord::Base
     joins(:board_assignments).where("board_assignments.user_id = ?", user.id)
   end
   
-  def as_json(options = {})
-    super(options.merge(include: :members))
-  end
+  # def as_json(options = {})
+  #   super(options.merge(include: :members))
+  # end
 end

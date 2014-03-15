@@ -13,14 +13,16 @@ class BoardsController < ApplicationController
     
     respond_to do |format|
       format.html { render :index }
-      format.json { render json: Board.all }
+      format.json { render json: Board.all, include: :lists, include: :cards }
     end
   end
   
   def show
     @board = Board.find(params[:id])
-    
-    render json: @board
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @board, include: :lists }
+    end
   end
   
   def create

@@ -10,7 +10,7 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
   template: JST["lists/show"],
   
   events: {
-    "click button.destroy": "destroy"
+    "click button.destroy-list": "destroy"
   },
   
   render: function () {
@@ -18,18 +18,17 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
       list: this.model
     });
     this.$el.html(renderedContent);
-    
+
     this.renderSubviews();
     
     return this;
   },
   
   addCard: function (card) {
-    debugger
     var cardsShowView = new Trellino.Views.CardsShow({
       model: card
     });
-    
+
     this.addSubview(".cards", cardsShowView);
     cardsShowView.render();
   },

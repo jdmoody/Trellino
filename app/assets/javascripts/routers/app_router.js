@@ -27,6 +27,7 @@ window.Trellino.Routers.AppRouter = Backbone.Router.extend({
     });
     
     board.fetch();
+
     this._swapView(showView);
   },
   

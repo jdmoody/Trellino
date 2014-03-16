@@ -6,8 +6,6 @@ window.Trellino.Views.CardsShow = Backbone.View.extend({
       card: this.model
     });
     
-    debugger
-    
     this.$el.html(renderedContent);
     
     return this;

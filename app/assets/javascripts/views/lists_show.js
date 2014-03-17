@@ -5,7 +5,7 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
     };
   },
   
-  className: "list-id-div",
+  className: "list-id-div col-md-3",
   
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
@@ -19,6 +19,10 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
   template: JST["lists/show"],
   
   events: {
+    "mouseenter .list-title": "toggleDestroyButton",
+    "mouseleave .list-title": "toggleDestroyButton",
+    "mouseenter .list": "toggleNewCardButton",
+    "mouseleave .list": "toggleNewCardButton",
     "click button.destroy-list": "destroy",
     "click button#new-card": "newCard",
     "move-list": "moveList"
@@ -31,10 +35,10 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     
     this.$(".cards").sortable({
+      placeholder: "highlight-card",
       connectWith: ".cards",
-      "start": function (event, ui) { ui.item.toggleClass("highlight-card") },
-      "update": function (event, ui) { ui.item.trigger("move-card") },
-      "stop": function (event, ui) { ui.item.toggleClass("highlight-card") }
+      revert: true,
+      "update": function (event, ui) { ui.item.trigger("move-card") }
     })
 
     this.renderSubviews();
@@ -81,8 +85,16 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
     this.removeSubview(".cards", cardsShowView);
   },
   
+  toggleDestroyButton: function () {
+    this.$('.destroy-list').toggle();
+  },
+  
   destroy: function () {
     this.model.destroy();
+  },
+  
+  toggleNewCardButton: function () {
+    this.$('#new-card').toggle();
   },
   
   newCard: function () {

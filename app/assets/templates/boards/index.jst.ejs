@@ -7,7 +7,7 @@
         <a href="#/boards/<%= board.get("id") %>">
           <%= board.get("title") %>
         </a>  
-        <button class="destroy" data-id="<%= board.get("id") %>">X</button>
+        <button class="destroy btn btn-danger btn-xs" data-id="<%= board.get("id") %>">x</button>
       </li>
     <% }); %>
   </ul>

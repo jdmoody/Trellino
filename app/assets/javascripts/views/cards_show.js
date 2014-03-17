@@ -8,6 +8,8 @@ window.Trellino.Views.CardsShow = Backbone.View.extend({
   template: JST["cards/show"],
   
   events: {
+    "mouseenter li.card": "toggleDestroyButton",
+    "mouseleave li.card": "toggleDestroyButton",
     "click button.destroy-card": "destroy",
     "move-card": "moveCard"
   },
@@ -38,6 +40,8 @@ window.Trellino.Views.CardsShow = Backbone.View.extend({
       newRank = nextModel.get("rank") - 1;
     } else if (nextModel == null) {
       newRank = prevModel.get("rank") + 1;
+    } else if (nextModel == null && prevModel == null) {
+      newRank = 1;
     } else {
       newRank = (prevModel.get("rank") + nextModel.get("rank")) / 2;
     }
@@ -46,6 +50,10 @@ window.Trellino.Views.CardsShow = Backbone.View.extend({
       rank: newRank,
       list_id: newListId
     });
+  },
+  
+  toggleDestroyButton: function () {
+    this.$('.destroy-card').toggle();
   },
   
   destroy: function () {

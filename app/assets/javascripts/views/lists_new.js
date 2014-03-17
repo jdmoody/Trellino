@@ -13,8 +13,10 @@ window.Trellino.Views.ListsNew = Backbone.View.extend({
     var renderedContent = this.template({
       board: this.board
     });
-    
+
     this.$el.html(renderedContent);
+    // debugger;
+    // $("#listModal").modal();
     
     return this;
   },

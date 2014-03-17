@@ -21,9 +21,9 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     
     this.$(".lists").sortable({
-      "start": function (event, ui) { ui.item.toggleClass("highlight") },
+      "start": function (event, ui) { ui.item.toggleClass("highlight-list") },
       "update": function (event, ui) { ui.item.trigger("move-list") },
-      "stop": function (event, ui) { ui.item.toggleClass("highlight") }
+      "stop": function (event, ui) { ui.item.toggleClass("highlight-list") }
     })
     
     this.renderSubviews();

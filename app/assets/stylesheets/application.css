@@ -10,9 +10,10 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap
  */
 
-body {
+/*body {
   margin: 0;
   box-sizing: border-box;
   padding: 8px;
@@ -81,7 +82,7 @@ li {
 
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 input[type="text"] {
@@ -98,6 +99,12 @@ button, input[type="submit"] {
 button:hover, input[type="submit"]:hover {
   background-color: transparent;
   color: blue;
+}*/
+
+.lists-container {
+  border: 5px solid grey;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .lists > div {
@@ -105,18 +112,28 @@ button:hover, input[type="submit"]:hover {
 }
 
 .list {
-  margin: 10px;
+  border: 5px solid grey;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .list-new {
   clear: both;
 }
 
-.highlight {
-    border: 1px solid red;
-    font-weight: bold;
-    font-size: 45px;
-    background-color: green;
+.card {
+  margin: 5px;
+}
+
+.highlight-list {
+  background-color: lightblue;
+  border-radius: 24px;
+}
+
+.highlight-card {
+  background-color: lightblue;
+  border: 5px solid grey;
+  border-radius: 24px;
 }
 
 #new-list-links {

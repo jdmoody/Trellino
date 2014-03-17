@@ -32,9 +32,9 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
     
     this.$(".cards").sortable({
       connectWith: ".cards",
-      "start": function (event, ui) { ui.item.toggleClass("highlight") },
+      "start": function (event, ui) { ui.item.toggleClass("highlight-card") },
       "update": function (event, ui) { ui.item.trigger("move-card") },
-      "stop": function (event, ui) { ui.item.toggleClass("highlight") }
+      "stop": function (event, ui) { ui.item.toggleClass("highlight-card") }
     })
 
     this.renderSubviews();

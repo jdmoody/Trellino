@@ -20,7 +20,7 @@ window.Trellino.Routers.AppRouter = Backbone.Router.extend({
   },
   
   boardsShow: function (id) {
-    var board = new Trellino.Models.Board({id: id});
+    var board = Trellino.Collections.boards.getOrFetch(id);
     
     var showView = new Trellino.Views.BoardsShow({
       model: board

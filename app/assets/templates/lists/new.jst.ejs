@@ -2,7 +2,7 @@
 
 <form id="new-list">
   <input type="hidden" name="list[board_id]" value="<%= board.escape("id") %>">
-  <input type="hidden" name="list[rank]" value="<%= board.lists().length %>">
+  <input type="hidden" name="list[rank]" value="<%= board.lists().length+1 %>">
   <label>
     List Title:
     <input type="text" name="list[title]">

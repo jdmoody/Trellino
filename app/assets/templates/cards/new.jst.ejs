@@ -1,0 +1,10 @@
+<form id="new-card">
+  <input type="hidden" name="card[list_id]" value="<%= list.escape("id") %>">
+  <input type="hidden" name="card[rank]" value="<%= list.cards().length+1 %>">
+  <label>
+    Card Title:
+    <input type="text" name="card[title]">
+  </label>
+  
+  <input type="submit" value="Create Card">
+</form>

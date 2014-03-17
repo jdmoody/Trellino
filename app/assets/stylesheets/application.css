@@ -100,13 +100,28 @@ button:hover, input[type="submit"]:hover {
   color: blue;
 }
 
-.list {
+.lists {
+  display: block;
+  overflow: hidden;
+}
+
+.lists > div {
   float: left;
+}
+
+.list {
   margin: 10px;
 }
 
 .list-new {
   clear: both;
+}
+
+.highlight {
+    border: 1px solid red;
+    font-weight: bold;
+    font-size: 45px;
+    background-color: green;
 }
 
 #new-list-links {

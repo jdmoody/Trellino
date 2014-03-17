@@ -100,11 +100,6 @@ button:hover, input[type="submit"]:hover {
   color: blue;
 }
 
-.lists {
-  display: block;
-  overflow: hidden;
-}
-
 .lists > div {
   float: left;
 }

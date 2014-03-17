@@ -12,6 +12,14 @@ window.Trellino.Models.List = Backbone.Model.extend({
     }
     
     return this._cards;
+  }, 
+  
+  toJSON: function () {
+    var clonedAttrs = _.clone(this.attributes);
+    delete clonedAttrs.id;
+    delete clonedAttrs.updated_at;
+    delete clonedAttrs.created_at;
+    return clonedAttrs;
   }
   // 
   // parse: function (response) {

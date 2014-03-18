@@ -21,14 +21,4 @@ window.Trellino.Models.List = Backbone.Model.extend({
     delete clonedAttrs.created_at;
     return clonedAttrs;
   }
-  // 
-  // parse: function (response) {
-  //   debugger
-  //   if (response.cards) {
-  //     this.cards().set(response.cards);
-  //     delete response.cards;
-  //   }
-  //   
-  //   return response;
-  // }
 });

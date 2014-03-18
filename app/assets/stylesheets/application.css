@@ -127,16 +127,12 @@ button:hover, input[type="submit"]:hover {
   clear: both;
 }
 
-button.destroy-list {
-  display: none;
+button.hidden-button{
+  visibility: hidden;
 }
 
 .card {
   margin: 5px;
-}
-
-button.destroy-card {
-  display: none;
 }
 
 .highlight-list {
@@ -153,7 +149,6 @@ button.destroy-card {
 
 #new-card {
   margin: 5px;
-  display: none;
 }
 #new-list-links {
   clear: both;

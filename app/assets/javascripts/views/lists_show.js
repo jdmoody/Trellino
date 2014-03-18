@@ -86,7 +86,7 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
   },
   
   toggleDestroyButton: function () {
-    this.$('.destroy-list').toggle();
+    this.$('.destroy-list').toggleClass("hidden-button");
   },
   
   destroy: function () {
@@ -94,7 +94,7 @@ window.Trellino.Views.ListsShow = Backbone.CompositeView.extend({
   },
   
   toggleNewCardButton: function () {
-    this.$('#new-card').toggle();
+    this.$('#new-card').toggleClass("hidden-button");
   },
   
   newCard: function () {

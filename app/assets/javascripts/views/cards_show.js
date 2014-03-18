@@ -53,7 +53,7 @@ window.Trellino.Views.CardsShow = Backbone.View.extend({
   },
   
   toggleDestroyButton: function () {
-    this.$('.destroy-card').toggle();
+    this.$('.destroy-card').toggleClass("hidden-button");
   },
   
   destroy: function () {

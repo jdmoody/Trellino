@@ -1,6 +1,6 @@
 window.Trellino.Routers.AppRouter = Backbone.Router.extend({
   routes: {
-    "": "boardsIndex",
+    "boards": "boardsIndex",
     "boards/new": "boardsNew",
     "boards/:id": "boardsShow",
   },
@@ -37,6 +37,6 @@ window.Trellino.Routers.AppRouter = Backbone.Router.extend({
     }
     this.currentView = newView;
     
-    $("body").html(newView.render().$el);
+    $("#content").html(newView.render().$el);
   }
 })

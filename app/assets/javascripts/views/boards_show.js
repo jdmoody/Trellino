@@ -21,6 +21,7 @@ window.Trellino.Views.BoardsShow = Backbone.CompositeView.extend({
       board: this.model
     });
     this.$el.html(renderedContent);
+    this.$el.addClass("board-content")
     
     this.$(".lists").sortable({
       revert: true,

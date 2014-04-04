@@ -1,5 +1,5 @@
+<h3><a href="/#/boards">Boards</a></h3>
 <div id="content" class="container"></div>
-
 
 <form action="<%= session_url %>" method="POST">
 	<input
@@ -12,5 +12,5 @@
 		name="authenticity_token"
 		value="<%= form_authenticity_token %>"
 	>
-	<input id="logout" type="submit" value="Log Out">
+	<input id="logout" class="btn btn-danger" type="submit" value="Log Out">
 </form>
